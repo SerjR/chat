@@ -1,4 +1,0 @@
-Technologies:
-
-
-What can upgrade:
