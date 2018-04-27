@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Chat</title>
+      <link rel="stylesheet" href="css/bootstrap.min.css">
+      <link rel="stylesheet" href="css/style.css">
+   </head>
+
+   <body>
+      <section>
+         <div class="container">
+            <div class="row">
+
+               <div id="friends" class="friends col-sm-4 offset-lg-1 col-lg-3">
+                  <img class="friends__icoCross d-sm-none" src="img/close.svg" onclick="hideFriends()" alt="close">
+                  <input class="friends__searchInput" type="text" placeholder="Search ...">
+                  <ul class="friends__list">
+                     <li id="Dima" class="friends__container friends__container-active" onclick="showDialog(people1)">
+                        <img class="friends__ava" src="img/ava-1.svg" alt="ava">
+                        <span class="friends__name">Dima</span>
+                        <span class="friends__status friends__status-offline">offline</span>
+                     </li>
+                     <li id="Bot" class="friends__container" onclick="showDialog(people2)">
+                        <img class="friends__ava" src="img/ava-3.svg" alt="ava">
+                        <span class="friends__name">Bot</span>
+                        <span class="friends__status friends__status-online">online</span>
+                     </li>
+                     <li id="Mom" class="friends__container" onclick="showDialog(people3)">
+                        <img class="friends__ava" src="img/ava-2.svg" alt="ava">
+                        <span class="friends__name">My mom</span>
+                        <span class="friends__status friends__status-offline">offline</span>
+                     </li>
+                  </ul>
+               </div>
+
+               <div id="messages" class="col-sm-8 col-lg-7">
+                  <div class="menuPanel">
+                     <img class="menuPanel__userAva" src="img/ava.svg" alt="ava">
+                     <span class="menuPanel__userName">Serj</span>
+                     <img class="menuPanel__icoFriends d-sm-none" src="img/friends.svg" onclick="showFriends()" alt="show friends">
+                  </div>
+                  <ul class="messages"></ul>
+                  <div class="inputPanel">
+                     <input id="mytext" class="inputPanel__input" placeholder="Type a message ..."/>
+                     <button id="addBtn" class="inputPanel__button" onclick="sendMessage()"></button>
+                  </div>
+               </div>
+
+            </div>
+         </div>
+
+      </section>
+      <script src="js/data.js"></script>
+      <script src="js/custom.js"></script>
+   </body>
+
+</html>
